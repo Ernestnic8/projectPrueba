@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.nav-item {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.nav-item:hover {
+    color: #007bff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #007bff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.card-body {
+    background-color: #fff;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.table thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.custom-nav {
+    background-color: #343a40 !important;
+}
+
+.custom-nav .navbar-brand, .custom-nav .nav-link {
+    color: #ffffff !important;
+}
+
+.custom-nav .nav-link:hover {
+    color: #f8f9fa !important;
+    background-color: #495057 !important;
+    border-radius: 5px;
+}
+
+.custom-nav .nav-link.active {
+    color: #ffffff !important;
+    background-color: #495057 !important;
+    border-radius: 5px;
+}
+

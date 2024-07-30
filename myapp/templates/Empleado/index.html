@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block titulo %} Empleados {% endblock %}
+
+{% block contenido %}
+
+<div class="card">
+    <div class="card-header">
+        <a
+            name=""
+            id=""
+            class="btn btn-success"
+            href="{%url 'crear'%}"
+            role="button">Agregar Empleado
+        </a>        
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Empleado</h4>
+        <div
+            class="table-responsive"
+        >
+            <table
+                class="table"
+            >
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for empleado in empleados %}
+                    <tr>
+                        <td>{{empleado.nombre_completo}}</td>
+                        <td>{{empleado.correo}}</td>
+                        <td>{{empleado.telefono}}</td>
+                        <td> 
+                            <a class="btn btn-info" href="{%url 'editar' empleado.empleadoid%}" role="button">Editar</a>
+                            <a class="btn btn-danger" href="{%url 'eliminar' empleado.empleadoid%}" role="button">Eliminar</a> 
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    <div class="card-footer text-muted"></div>
+</div>
+
+
+{%endblock%}

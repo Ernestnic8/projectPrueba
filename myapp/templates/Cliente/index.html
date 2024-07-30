@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block titulo %} Cliente {% endblock %}
+
+{% block contenido %}
+
+<div class="card">
+    <div class="card-header">
+        <a
+            name=""
+            id=""
+            class="btn btn-success"
+            href="{%url 'crear'%}"
+            role="button">Agregar Cliente
+        </a>        
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Cliente</h4>
+        <div
+            class="table-responsive"
+        >
+            <table
+                class="table"
+            >
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cliente in clientes %}
+                    <tr>
+                        <td>{{cliente.nombre_completo}}</td>
+                        <td>{{cliente.telefono}}</td>
+                        <td> 
+                            <a class="btn btn-info" href="{%url 'editarCliente' cliente.clienteid%}" role="button">Editar</a>
+                            <a class="btn btn-danger" href="{%url 'eliminarCliente' cliente.clienteid%}" role="button">Eliminar</a> 
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    <div class="card-footer text-muted"></div>
+</div>
+
+
+{%endblock%}
